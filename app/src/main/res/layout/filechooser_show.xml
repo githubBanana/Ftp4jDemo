@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="259dip"
+    android:layout_height="429dip"
+    android:orientation="horizontal"
+     >
+
+    <Button
+        android:id="@+id/imgBackFolder"
+        android:layout_width="57dip"
+        android:layout_height="36dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="4dip"
+        android:textColor="#fff"
+        android:text="后退" />
+    
+    <TextView
+        android:id="@+id/tvPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/imgBackFolder"
+        android:layout_marginRight="2dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="15dip"
+        android:gravity="left"
+        android:singleLine="true"
+        android:ellipsize="start"
+        android:textColor="#009bfe"
+        android:textSize="16sp" />
+    
+    <ImageView 
+        android:id="@+id/lineBetween"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:background="#009bfe"
+        android:layout_below="@id/imgBackFolder"
+        />
+    
+
+    <GridView
+        android:id="@+id/gvFileChooser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lineBetween"
+        android:clickable="true"
+        android:columnWidth="90dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:layout_marginTop="1dip"
+        android:listSelector="@android:color/transparent"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+    <TextView
+        android:id="@+id/tvEmptyHint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="文件夹为空"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" >
+    </TextView>
+
+</RelativeLayout>
